@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{page_title}}</title>
-        <body>        
-            {% with messages = get_flashed_messages(with_categories=True) %}
-            <ul>
-                {% for category,message in messages %}
-                <li class="{{category}}">{{message}}</li>
-                {% endfor %}
-            </ul>
-            {% endwith %}
-            {% block content %}
-            {% endblock %}
-        </div>
-    </body>
-    </html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{page_title}}</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-7ELRJF5/u1pkLd0W7K793Y7ZCb1ISE8FjEKiDAwHD3nSDbA2E9Txc423ovuNf1CV" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700" rel="stylesheet">   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/styles/main.css" /> <!--/static/styles/main.css -->  
+    
+
+    <!-- <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+    <script src="../static/js/jquery-3.1.0.min.js"></script>
+    <script src="../static/js/signUp.js"></script>      -->
+</head>
+<body class="bg_img">
+    <div>
+    <header>
+        <a name="top"></a>            
+        <nav class="navbar navbar-light bg-faded">            
+            <a class="btn-large btn-primary" href="/" type="button">home</a>
+            <a class="btn-large btn-secondary" href="/blog" type="button">all posts</a>
+            <a class="btn-large btn-success" href="/newpost" type="button">new post</a>
+            <a class="btn-large btn-warning" href="/login" type="button">login</a>
+            <a class="btn-large btn-danger" href="/logout" type="button">logout</a>
+        </nav>
+    </header>
+    </div>
+    <hr>
+    <hr>
+    <div class="container-fluid">    
+      <div class="jumbotron jumbotron-billboard">
+        <div class="img"></div>
+    
+          <h2 id="intro">Blogz</h2>
+            <p id="slogan">
+              Blogtime Storyz for the Young & Young @ Heart
+            </p></div>  
+    
+        <div class="container">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+    
+        <ul>
+            {% for category,message in messages %}
+            <li class="{{category}}">{{message}}</li>
+            {% endfor %}
+        
+        </ul>
+    
+        {% endwith %}
+    {% block content %}
+{% endblock %}
+                 
+</div>
+</body>
+</html>

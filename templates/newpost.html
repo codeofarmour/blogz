@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Storytime!</h1>
+<form action="/newpost" method="POST">
+  <label>
+    Name your story:<br/>
+      <p class="error">{{title_error}}</p>
+        <input class="entry" type="text" name="title" autofocus size="100%" value="{{title}}">  <!--size="133"-->    
+<br/>
+    </label>
+    
+</div>
+<div>
+    
+    <label>
+    Your amazing story goes here:<br/>
+    <p class="error">{{body_error}}</p>    
+    <textarea id="blogspace" name="body" width="100%" value="{{body}}"></textarea>  <!--rows="15" cols="135" -->
+    <br/>
+</div>
+    <input class="button" type="submit" value="Post your story!">
+    </label>
+</form>
+
+{% endblock %}
