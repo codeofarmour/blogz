@@ -35,7 +35,7 @@ class User(db.Model):
 
 @app.before_request
 def require_login():    
-    allowed_routes = ['login', 'list_blogs', 'index', 'signup', 'static', 'logout']
+    allowed_routes = ['login', 'index', 'signup', 'static', 'logout'] 
     if request.endpoint not in allowed_routes and 'username' not in session:
         return redirect('/login')
 
@@ -160,7 +160,7 @@ def add_entry():
     if body == "":
         body_error = "Surely you meant to write something!"
     elif len(body) > 2500:
-        body_error = "Wrap it up! Storyz cannot use more than 2500 characterz!"
+        body_error = "Wrap it up! Storyz cannot contain more than 2500 characterz!"
     else:
         body_error = ""    
     

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<a href="/signup" id="cna" class="btn-large btn-warning" type="button">create new account</a> <!-- paper-btn btn-secondary -->
+<a href="/signup" id="cna" class="paper-btn btn-warning" type="button">create new account</a> <!-- paper-btn btn-secondary -->
 <p></p>   
 <h1>Log In</h1>
 <form action="/login" method="POST">
@@ -22,8 +22,10 @@
         </tr>
     </table>
     <p></p>
+    <p></p>
+    <p></p>
     <!-- <a href="/newpost" id="create" class="btn-large btn-success" type="button">Log in</a> -->
-    <input class="paper-btn btn-large btn-secondary" id="li" type="submit" value="login"> 
+    <input class="paper-btn btn-secondary" id="li" type="submit" value="login"> <!--btn-large-->
     <!--class="button" type="submit" value="Login">-->
 </form>
 {% endblock %}
