@@ -6,23 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{page_title}}</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css">
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-7ELRJF5/u1pkLd0W7K793Y7ZCb1ISE8FjEKiDAwHD3nSDbA2E9Txc423ovuNf1CV" crossorigin="anonymous"> -->
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="static/styles/main.css" /> <!--/static/styles/main.css -->
+    <link type="text/css" rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/papercss@1.4.1/dist/paper.min.css">    
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="static/styles/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
-
-    <!-- <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-    <link href="../static/signup.css" rel="stylesheet">
-    <script src="../static/js/jquery-3.1.0.min.js"></script>
-    <script src="../static/js/signUp.js"></script>      -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>    
 </head>
 <body class="bg_img">
     <div>
@@ -49,13 +40,11 @@
             </p></div>  
     
         <div class="container">
-        {% with messages = get_flashed_messages(with_categories=True) %}
-    
+        {% with messages = get_flashed_messages(with_categories=True) %}    
         <ul>
             {% for category,message in messages %}
             <li class="{{category}}">{{message}}</li>
-            {% endfor %}
-        
+            {% endfor %}        
         </ul>
     
         {% endwith %}

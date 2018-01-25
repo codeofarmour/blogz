@@ -9,10 +9,15 @@
             <h2>{{entry.title}}</h2>
         </a>
     </li>
-    <li>{{entry.body}}</li>
-    <li>written by {{entry.owner.username}}</li>
-    <li>{{entry.created}}</li>
+      <div class="container">
+        <li>{{entry.body}}</li>
+        <li>written by {{entry.owner.username}}</li>
+        <li>{{entry.created}}
+    </li>
+      </div>
     <hr></hr>
     {% endfor %}
 </ul>
-<a class="bottom" href="#top">top of page</a> {% endblock %}
+<a class="bottom" href="#top">top of page</a>
+
+{% endblock %}

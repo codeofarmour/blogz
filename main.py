@@ -117,7 +117,7 @@ def login():
 @app.route('/', methods=["POST", "GET"])
 def index():    
     users = User.query.all()
-    return render_template('index.html', page_title = "bloggers", users = users)
+    return render_template('index.html', page_title = "storytellerz", users = users)
     
 @app.route('/logout')
 def logout():    
