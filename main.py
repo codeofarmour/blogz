@@ -50,25 +50,25 @@ def signup():
     user = User.query.filter_by(username=username).first()
     
     if username == "":
-        username_error = "Introduce yourself!"
+        username_error = "Introduce yourself!"        
     elif len(username) < 3:
-        username_error = "Sorry 2 nitpick, but your username needs to be 3 characters or more ;)"
-    elif user: 
-        username_error = "Aw ... that name is taken. You do you."
-    else:
+        username_error = "Sorry 2 nitpick, but your username needs to be 3 characters or more ;)"        
+    elif user:
+        username_error = "Aw ... that name is taken. You do you."        
+    else:        
         username_error = ""    
     if password == "" and not user: 
-        password_error = "Security is everything. Add a password!"
+        password_error = "Security is everything. Add a password!"       
     elif len(password) < 3 and not user: 
-        password_error = "Aim for at least 3 characters, k?"
-    else:
+        password_error = "Aim for at least 3 characters, k?"        
+    else:        
         password_error = ""    
     if verify == "" and not user: 
-        verify_error = "Do us a solid and just double-check for accuracy!"
+        verify_error = "Do us a solid and just double-check for accuracy!"        
     elif verify != password and not user: 
-        verify_error = "Try that again please!"
+         verify_error = "Try that again please!"        
     else:
-        verify_error = ""    
+         verify_error = ""            
     if not username_error and not password_error and not verify_error:
         if request.method == "POST":
             new_user = User(username, password)

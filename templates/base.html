@@ -27,7 +27,7 @@
             <a class="paper-btn btn-danger" href="/logout" type="button">logout</a>
         </nav>
     </header>
-    </div>
+    </div>    
     <hr>
     <hr>
     <div class="container-fluid">    
@@ -42,15 +42,14 @@
         <div class="container">
         {% with messages = get_flashed_messages(with_categories=True) %}    
         <ul>
-            {% for category,message in messages %}
+            {% for category, message in messages %}
             <li class="{{category}}">{{message}}</li>
             {% endfor %}        
-        </ul>
-    
+        </ul>    
         {% endwith %}
     {% block content %}
 {% endblock %}
                  
-</div>
+    </div>
 </body>
 </html>
