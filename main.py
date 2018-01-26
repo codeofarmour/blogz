@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect, render_template, session, flash
 from flask_sqlalchemy import SQLAlchemy
 from hashutils import make_pw_hash, check_pw_hash
-from datetime import datetime
+from datetime import datetime as dt
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -12,7 +12,7 @@ app.secret_key = 'preciousshoes'
 
 class Blog(db.Model):    
     id = db.Column(db.Integer, primary_key = True)
-    created = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    created = db.Column(db.String(25), nullable=False, default=dt.now().strftime('%B %d, %Y'))
     title = db.Column(db.String(100))
     body = db.Column(db.String(2500))    
     owner_id = db.Column(db.Integer, db.ForeignKey('user.id'))

@@ -54,5 +54,12 @@ input[type=password] {
     color: #a7342d;
   }
   #ca, #cna, #li { 
-    font-family: 'Cabin Sketch', cursive; /* Patrick Hand SC
-  } 
+    font-family: 'Cabin Sketch', cursive; 
+  }
+  .green {
+    color: #1e7e34;
+  }
+  #yellow {
+    color: #ffc107;
+  }
+
